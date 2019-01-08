@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.1",
 	"appid": "wx1ef2bb050c949665",
-	"projectname": "myTampon",
+	"projectname": "wxTampon",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
