@@ -1,0 +1,39 @@
+/* pages/me/periodsetting.wxss */
+page{
+  background-color: rgb(240, 240, 240);
+}
+.period_text{
+  color: gray;
+  font-size: 28rpx;
+  line-height: 56rpx;
+  padding: 0 6%;
+}
+.period_setting{
+  display: flex;
+  width: 88%;
+  background-color: white;
+  /* border: 1rpx solid red; */
+  padding: 2% 6%;
+  position: relative;
+  line-height: 160%;
+  font-size: 36rpx;
+}
+.period_img{
+  width: 56rpx;
+  height: 56rpx;
+}
+.setting_text{
+  margin-left: 28rpx;
+  /* line-height: 180%;
+  font-size: 32rpx; */
+  /* border: 1rpx solid green; */
+}
+.period_picker{
+  display: flex;
+  /* border: 1rpx solid green; */
+  position: absolute;
+  right: 3%;
+}
+.picker{
+  display: flex;
+}

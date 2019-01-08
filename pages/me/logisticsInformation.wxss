@@ -1,0 +1,78 @@
+/* pages/me/logisticsInformation.wxss */
+page{
+  background-color: rgb(240, 240, 240);
+}
+.topTab{
+  display: flex;
+  width: 100%;
+  padding: 18rpx 5%;
+  background-color: white;
+}
+.tab_base{
+  width: 30%;
+  height: 100%;
+  line-height: 120%;
+  text-align: center;
+}
+.tab_active{
+  /* border: 1rpx solid red; */
+  padding: 5% 0;
+  color: #fc5871;
+  border-bottom: 2px solid #fc5871;
+}
+
+.order_bg{
+  width: 88%;
+  margin: 16rpx 4%;
+  padding: 2% 2%;
+  /* height: 100rpx; */
+  background-color: white;
+  border-radius: 16rpx;
+  /* border: 1rpx solid red; */
+}
+.order_body{
+  display: flex;
+}
+.order_body image{
+  width: 88px;
+  height: 88px;
+  border-radius: 16rpx;
+  border: 1rpx solid #fc5871;
+}
+.order_text{
+  margin-left: 4%;
+  width: 70%;
+  height: 88px;
+  position: relative;
+  /* border: 1rpx solid blue; */
+}
+.order_bottom{
+  text-align: right;
+}
+.btn_bottom{
+  position:relative;
+  height:36px;
+  margin-top:6px;
+}
+.lj_xufei{
+  position:absolute;
+  right:0;
+  width:26%;
+  height:30px;
+  line-height:30px;
+  font-size:28rpx;
+  border-radius:28rpx;
+  /* background-color: rgba(0, 0, 0, 0); */
+}
+.ckwl{
+  position:absolute;
+  right:30%;
+  width:26%;
+  height:30px;
+  line-height:30px;
+  font-size:28rpx;
+  color: #fc5871;
+  border-radius:28rpx;
+  /* background-color: rgba(0, 0, 0, 0); */
+  border: 1px solid #fc5871;
+}

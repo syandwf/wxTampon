@@ -1,0 +1,20 @@
+<!--pages/me/foreverorder.wxml-->
+<view wx:for="{{foreverorder}}" wx:for-item="orderItem"  wx:key="*this" class='order_bg'>
+  <view style='margin-bottom:6px;color:#fc5871;position:relative;'>
+    {{orderItem.isWho}}
+    <text style='position:absolute;right:0;'>剩余：{{orderItem.remain}}个月</text>
+  </view>
+  <view class='order_body'>
+    <image src='{{orderItem.box_url}}'></image>
+    <view class='order_text'>
+      <text style='display:block;'>{{orderItem.order_name}}</text>
+      <text decode="{{true}}" space="{{true}}" style='position:absolute;bottom:0;'>￥{{orderItem.order_price}}&nbsp;&nbsp;<text style='color:rgb(188,188,188);'>x{{orderItem.box_num}}</text></text>
+    </view>
+  </view>
+  <view class='order_bottom'>
+    <view style='color:rgb(188,188,188);display:inline-block;'>合计</view><view style='font-size:18px;font-weight:bold;display:inline-block;'>￥{{orderItem.sum_price}}</view>
+  </view>
+  <view class="lj_xufei">
+    <button plain="true" bindtap='ljXufei'>立即续费</button>
+  </view>
+</view>

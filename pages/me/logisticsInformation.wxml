@@ -1,0 +1,69 @@
+<view class='topTab'>
+  <view class='tab_base' data-val='0' bindtap='changeTab'><text class="{{topTab == 0 ? 'tab_active' : ''}}">全部</text></view>
+  <view class='tab_base' data-val='1' bindtap='changeTab'><text class="{{topTab == 1 ? 'tab_active' : ''}}">待收货</text></view>
+  <view class='tab_base' data-val='2' bindtap='changeTab'><text class="{{topTab == 2 ? 'tab_active' : ''}}">待评价</text></view>
+</view>
+<view style="display:{{topTab == 0 ? 'block' : 'none'}};">
+  <view wx:for="{{information}}" wx:for-item="inforItem" wx:key="*this" class='order_bg'>
+    <view style='margin-bottom:6px;color:#fc5871;position:relative;'>
+      {{inforItem.isWho}}
+      <text style='position:absolute;right:0;'>{{inforItem.status}}</text>
+    </view>
+    <view class='order_body'>
+      <image src='{{inforItem.box_url}}'></image>
+      <view class='order_text'>
+        <text style='display:block;'>{{inforItem.order_name}}</text>
+        <text decode="{{true}}" space="{{true}}" style='position:absolute;bottom:0;'>￥{{inforItem.order_price}}&nbsp;&nbsp;<text style='color:rgb(188,188,188);'>x1</text></text>
+      </view>
+    </view>
+    <view class='order_bottom'>
+      <view style='color:rgb(188,188,188);display:inline-block;'>合计</view><view style='font-size:18px;font-weight:bold;display:inline-block;'>￥{{inforItem.order_price}}</view>
+    </view>
+    <view class="btn_bottom">
+      <button plain="true" class="ckwl"  data-id="{{inforItem.order_id}}" bindtap='viewLogistics'>查看物流</button>
+      <button plain="true" class="lj_xufei"  data-id="{{inforItem.order_id}}" bindtap="{{inforItem.status == '已发货' ? 'confirmReceipt' : 'immediateEvaluation' }}" style='color: #fc5871;border: 1px solid #fc5871;'>{{inforItem.status == '已发货' ? '确认收货' : '立即评价' }}</button>
+    </view>
+  </view>
+</view>
+<view style="display:{{topTab == 1 ? 'block' : 'none'}};">
+  <view wx:for="{{d_sh}}" wx:for-item="inforItem"  wx:key="*this" class='order_bg'>
+    <view style='margin-bottom:6px;color:#fc5871;position:relative;'>
+      {{inforItem.isWho}}
+      <text style='position:absolute;right:0;'>{{inforItem.status}}</text>
+    </view>
+    <view class='order_body'>
+      <image src='{{inforItem.box_url}}'></image>
+      <view class='order_text'>
+        <text style='display:block;'>{{inforItem.order_name}}</text>
+        <text decode="{{true}}" space="{{true}}" style='position:absolute;bottom:0;'>￥{{inforItem.order_price}}&nbsp;&nbsp;<text style='color:rgb(188,188,188);'>x1</text></text>
+      </view>
+    </view>
+    <view class='order_bottom'>
+      <view style='color:rgb(188,188,188);display:inline-block;'>合计</view><view style='font-size:18px;font-weight:bold;display:inline-block;'>￥{{inforItem.order_price}}</view>
+    </view>
+    <view class="btn_bottom">
+      <button class="lj_xufei" plain="true" bindtap='confirmReceipt' style='color: #fc5871;border: 1px solid #fc5871;'>确认收货</button>
+    </view>
+  </view>
+</view>
+<view style="display:{{topTab == 2 ? 'block' : 'none'}};">
+  <view wx:for="{{d_comment}}" wx:for-item="inforItem"  wx:key="*this" class='order_bg'>
+    <view style='margin-bottom:6px;color:#fc5871;position:relative;'>
+      {{inforItem.isWho}}
+      <text style='position:absolute;right:0;'>{{inforItem.status}}</text>
+    </view>
+    <view class='order_body'>
+      <image src='{{inforItem.box_url}}'></image>
+      <view class='order_text'>
+        <text style='display:block;'>{{inforItem.order_name}}</text>
+        <text decode="{{true}}" space="{{true}}" style='position:absolute;bottom:0;'>￥{{inforItem.order_price}}&nbsp;&nbsp;<text style='color:rgb(188,188,188);'>x1</text></text>
+      </view>
+    </view>
+    <view class='order_bottom'>
+      <view style='color:rgb(188,188,188);display:inline-block;'>合计</view><view style='font-size:18px;font-weight:bold;display:inline-block;'>￥{{inforItem.order_price}}</view>
+    </view>
+    <view class='btn_bottom'>
+      <button plain="true" class="lj_xufei"  bindtap='confirmReceipt' style='color: #fc5871;border: 1px solid #fc5871;'>立即评价</button>
+    </view>
+  </view>
+</view>

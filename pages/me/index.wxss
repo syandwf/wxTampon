@@ -1,0 +1,91 @@
+/* pages/me/index.wxss */
+.userbackgroud{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 88rpx;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  background-color: #fc5871;
+  background-size: 100% 100%;
+  background-repeat: round;
+  position: relative;
+}
+.login-avatar{
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx auto;
+  border-radius: 50%;
+  padding: 0;
+}
+.login-avatarIn{
+  width: 128rpx;
+  height: 128rpx;
+  margin: auto;
+}
+.login-sq{
+  color: #fff;
+  text-align:center;
+  align-items:center;
+  justify-content: center;
+  margin: auto;
+}
+.bind_phone{
+  color: white;
+  font-size: 30rpx;
+}
+.userinfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo button{
+  margin-top: 50rpx;
+  background-color: #fff;
+}
+.userinfo-avatar{
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx auto;
+  border-radius: 50%;
+}
+.userinfo-nickname{
+  color: #fff;
+  font-size: 36rpx;
+}
+.userinfo-message{
+  display: flex;
+  justify-content:space-between;
+  margin-top: 20rpx;
+  width: 180%;
+  /* border: 1rpx solid blue; */
+}
+.userinfo-balance{
+  /* position: absolute;
+  left: 28rpx;
+  bottom: 8rpx; */
+  color:#fff;
+  font-size: 26rpx;
+  float: left;
+}
+.userinfo-integral{
+  /* position: absolute;
+  right: 28rpx;
+  bottom: 8rpx; */
+  color:#fff;
+  font-size: 26rpx;
+}
+.view_base{
+  display: flex;
+  margin: 0 50rpx;
+  padding: 28rpx 0;
+  border-bottom: 1rpx solid rgb(240, 240, 240);
+  position: relative;
+}
+.text_base{
+  margin-left: 36rpx;
+  font-size: 32rpx;
+  color: rgb(128, 128, 128);
+}

@@ -1,0 +1,38 @@
+<!--pages/me/periodsetting.wxml-->
+<!-- <text>pages/me/periodsetting.wxml</text> -->
+<view>
+  <text class='period_text'>您的月经大概持续几天？</text>
+  <view class='period_setting'>
+    <image src='/image/water.png' class='period_img'></image>
+    <text class='setting_text'>经期长度</text>
+    <picker class='period_picker' bindchange="bindDayChange" value="{{index}}" range="{{day}}">
+      <view class="picker">
+        {{day[index]}}天<image src='/image/right_arrow.png' style='width:56rpx;height:56rpx;'></image>
+      </view>
+    </picker>
+  </view>
+</view>
+<view style='margin-top:56rpx;'>
+  <text class='period_text'>两次月经开始日期大概间隔多久?</text>
+  <view class='period_setting'>
+    <image src='/image/water.png' class='period_img'></image>
+    <text class='setting_text'>周期长度</text>
+    <picker class='period_picker' bindchange="bindCycleChange" value="{{index2}}" range="{{cycle}}">
+      <view class="picker">
+        {{cycle[index2]}}天<image src='/image/right_arrow.png' style='width:56rpx;height:56rpx;'></image>
+      </view>
+    </picker>
+  </view>
+</view>
+<view style='margin-top:56rpx;'>
+  <text class='period_text'>月经是否准时来?</text>
+  <view class='period_setting'>
+    <image src='/image/water.png' class='period_img'></image>
+    <text class='setting_text'>月经规律</text>
+    <picker class='period_picker' bindchange="bindLawChange" value="{{index3}}" range="{{law}}">
+      <view class="picker">
+        {{law[index3]}}<image src='/image/right_arrow.png' style='width:56rpx;height:56rpx;'></image>
+      </view>
+    </picker>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<!--pages/me/bindphone.wxml-->
+<!-- <text>pages/me/bindphone.wxml</text> -->
+<view class='base_view'>
+  <form bindsubmit='subphone' bindreset='retphone'>
+    <view class='form_view'>
+      <label>手机号码</label>
+      <input name="phone" class='base_input' type='number' placeholder="请输入有效电话号码" bindinput='inputphone'></input>
+    </view>
+    <button form-type="submit" disabled="{{disabled}}" class='btn_sub'>完成</button>
+  </form>
+</view>

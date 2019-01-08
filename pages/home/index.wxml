@@ -1,0 +1,36 @@
+<!--pages/home/index.wxml-->
+<view class='sw_bg'></view>
+<swiper indicator-dots="true"
+  autoplay="true" interval="5000" duration="1000" indicator-active-color="#fc5871">
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view>
+  <image src='/image/hot_box.png' style='width:100%;height:188rpx;'></image>
+</view>
+<view class='shop'>
+  <view class='th_box'>
+    <text class='th_name'>土豪盒子</text>
+    <text class='th_price'>半年：￥534</text>
+    <image src='/image/sf.jpg'></image>
+  </view>
+  <view class='right'>
+    <view class='jhs_box'>
+      <view class='jhs_text'>
+        <text class='right_name'>聚划算盒子</text>
+        <text class='right_price'>半年：￥336</text>
+      </view>
+      <image src='/image/sf.jpg'></image>
+    </view>
+    <view class='yh_box'>
+      <view class='jhs_text'>
+        <text class='right_name'>聚便宜盒子</text>
+        <text class='right_price'>半年：￥198</text>
+      </view>
+      <image src='/image/sf.jpg'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,65 @@
+<!--pages/circle/details.wxml-->
+<!-- <text>pages/circle/details.wxml</text>
+{{postId}} -->
+<view class='content'>
+  <view class='content_top'>
+    <image src='{{circle_detail.user_img}}'></image>
+    <text class='top_username'>{{circle_detail.user_name}}</text>
+    <button class="{{circle_detail.isGz ? 'top_ygz' : 'top_gz'}}" bindtap="click_gz" data-detail='{{circle_detail}}'>{{circle_detail.isGz ? '已关注' : '关注'}}</button>
+  </view>
+  <view class='s_swriper'>
+      <swiper indicator-dots="true" indicator-active-color="#fc5871" class="s_item" style="height:{{item_height}}">
+        <swiper-item wx:for="{{circle_detail.content_img}}" wx:for-item="imgItem" wx:for-index="idx" wx:key="idx">
+          <image src='{{imgItem}}' class='s_img' style="height:{{img_height}}"></image>
+        </swiper-item>
+      </swiper>
+  </view>
+  <view class='content_text'>
+    <text class="{{iszk ? 'c_textAll' : 'c_text'}}">{{circle_detail.content}}</text>
+  </view>
+  <view class='c_zk' bindtap="contentzk">{{iszk ? '收起' : '展开'}}</view>
+  <view class='content_bottom'>
+      <text class='con_text'>{{circle_detail.time}}</text>
+      <view class='con_right'>
+        <view class='con_comment'>
+          <image src="/image/comment.png" class='comment_img'></image>
+          <text class='con_text'>{{circle_detail.comment_num}}</text>
+        </view>
+        <view class='con_zan'>
+          <image src="/image/zan.png" class='comment_img'></image>
+          <text class='con_text'>{{circle_detail.zan_num}}</text>
+        </view>
+      </view> 
+  </view>
+</view>
+
+<view class='comment_list'>
+  <view class="com_top">共{{comment_num}}条评论</view>
+  <view class='com_con' wx:for="{{comment_list}}" wx:for-item="comItem"  wx:key="*this">
+    <view class='com_con_top'>
+      <image src='{{comItem.user_img}}'></image>
+      <text>{{comItem.user_name}}</text>
+    </view>
+    <view class='com_con_mid'>
+      {{comItem.content}}
+    </view>
+    <view class='com_con_bot'>
+      <text>{{comItem.time}}</text>
+      <view class='com_con_bot_right'>
+        <view class='con_comment'>
+          <image src="/image/comment.png" class='com_con_bot_right_img'></image>
+          <text class='con_text'>{{comItem.comment_num}}</text>
+        </view>
+        <view class='con_zan'>
+          <image src="/image/zan.png" class='com_con_bot_right_img'></image>
+          <text class='con_text'>{{comItem.zan_num}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='com_con_reply'>
+      <view wx:for="{{comItem.reply_list}}" wx:for-item="replyItem" class='com_con_reply_item'  wx:key="*this">
+        <text style='color:rgb(87,120,167);'>{{replyItem.user_name}}</text>：{{replyItem.content}}
+      </view>
+    </view>
+  </view>
+</view>

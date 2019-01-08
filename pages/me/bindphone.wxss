@@ -1,0 +1,27 @@
+/* pages/me/bindphone.wxss */
+button{
+  background-color: #fc5871;
+  color: white;
+}
+button[disabled] {
+    color: #fff !important;
+    background-color: rgba(252, 88, 113, 0.5) !important;
+}
+.base_view{
+  width: 90%;
+  padding: 6% 5%;
+}
+.form_view{
+  width: 100%;
+  display: flex;
+  padding:28rpx 0;
+  border-top: 1rpx solid rgb(240, 240, 240);
+  border-bottom: 1rpx solid rgb(240, 240, 240);
+}
+.base_input{
+  margin-left: 18rpx;
+}
+.btn_sub{
+  width: 50%;
+  margin:6% 25%;
+}

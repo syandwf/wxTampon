@@ -1,0 +1,103 @@
+/* pages/home/index.wxss */
+page{
+  background-color: rgb(240, 240, 240);
+}
+.sw_bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280rpx;
+  background-color: #fc5871;
+  z-index: -1;
+}
+swiper{
+  width: 92%;
+  margin: 16rpx 4%;
+  margin-bottom: 0;
+  height: 400rpx;
+  z-index: 99;
+}
+swiper-item{
+  text-align: center;
+  border-radius: 16rpx;
+}
+.slide-image{
+  width:100%; 
+  overflow:show;
+}
+.shop{
+  width: 92%;
+  height: 400rpx;
+  margin: 8rpx 4%; 
+  /* border: 1rpx solid green; */
+  display: flex;
+}
+.th_box{
+  width: 37%;
+  height: 92%;
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 2%;
+  /* border: 1px solid red; */
+}
+.th_box image{
+  width: 90%;
+  height: 60%;
+  margin: 20% 5%;
+  margin-bottom: 0;
+}
+.th_name{
+  font-size: 36rpx;
+  font-family: '微软雅黑';
+  color: red;
+  display: block;
+}
+.th_price{
+  font-size: 28rpx;
+  color: gray;
+}
+.right{
+  margin-left: 3%;
+  width: 53%;
+  height: 92%;
+  /* border: 1rpx solid blue; */
+}
+.right image{
+  width: 46%;
+  height: 66%;
+  margin-top:6%;
+}
+.right_name{
+  font-size: 30rpx;
+  font-family: '微软雅黑';
+  color: red;
+  display: block;
+}
+.right_price{
+  font-size: 22rpx;
+  color: gray;
+}
+.jhs_box{
+  width: 100%;
+  height: 48%;
+  background-color: white;
+  margin-bottom: 4%;
+  border-radius: 16rpx;
+  padding: 2%;
+  display: flex;
+}
+.jhs_text{
+  margin: 10% 5%;
+  height: 100%;
+  line-height: 120%;
+  /* border: 1rpx solid yellow; */
+}
+.yh_box{
+  display: flex;
+  width: 100%;
+  height: 48%;
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 2%;
+}

@@ -1,0 +1,23 @@
+<!--pages/me/receivingAddress.wxml-->
+<view class='address'>
+  <view class='address_detail' wx:for="{{address_list}}" wx:for-item="addressItem"  wx:key="*this">
+    <view class='address_content'>
+      <text style='display:block;' decode="{{true}}" space="{{true}}">{{addressItem.name}}&nbsp;&nbsp;{{addressItem.tel}}</text>
+      <text decode="{{true}}" space="{{true}}">{{addressItem.province}}&nbsp;|&nbsp;{{addressItem.city}}&nbsp;|&nbsp;{{addressItem.area}}&nbsp;|&nbsp;{{addressItem.address}}</text>
+    </view>
+    <view class='address_bot'>
+      <label>
+        <radio value="{{item.name}}" checked="{{addressItem.isDefault ? true : fasle }}" color='#fc5871'>默认地址</radio>
+      </label>
+      <view class='bottom_btn'>
+          <view class='btn_edit' style='display:flex;margin-right:18rpx;'>
+            <image src='/image/edit.png'></image>编辑
+          </view>
+          <view class='btn_delete' style='display:flex;'>
+            <image src='/image/delete.png'></image>删除
+          </view>
+      </view>
+    </view>
+  </view>
+</view>
+<button class='add_address' bindtap='addAddress'>添加新地址</button>

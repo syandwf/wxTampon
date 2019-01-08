@@ -1,0 +1,66 @@
+<view class="userbackgroud">
+  <view class="userinfo">
+    <view wx:if="{{!hasUserInfo && canIUse}}">
+      <button open-type='getUserInfo' bindgetuserinfo='getUserInfo' class='login-avatar'>
+        <image class='login-avatarIn' src="/image/w-login.png" background-size="cover"></image>
+      </button>
+      <text class="login-sq">授权登录</text>
+    </view>
+    <block wx:else>
+      <image class='userinfo-avatar' src="{{userInfo.wx_headimg}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.wx_nickname}}</text>
+      <view wx:if="{{userInfo.phone}}">
+        <text class='bind_phone'>{{userInfo.phone}}</text>
+      </view>
+      <block wx:else>
+        <text class='bind_phone' bindtap='bindphone'>绑定手机号</text>
+      </block>
+      <view class='userinfo-message'>
+        <view class="userinfo-balance">余额：￥{{userInfo.price}}</view>
+        <view class="userinfo-integral">积分：{{userInfo.integral}}分</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view wx:if="{{isShow}}">
+  <view class='view_base' bindtap='friendWelfare'>
+    <image style='width:40rpx;height:40rpx;' src="/image/welfare.png"></image>
+    <text class='text_base'>邀请好友下单福利</text>
+    <image style='width:40rpx;height:40rpx;position:absolute;right:0;' src="/image/right_arrow.png"></image>
+  </view>
+  <view class='view_base' bindtap='dakaWelfare'>
+    <image style='width:40rpx;height:40rpx;' src="/image/sign_in.png"></image>
+    <text class='text_base'>每天打卡福利</text>
+    <image style='width:40rpx;height:40rpx;position:absolute;right:0;' src="/image/right_arrow.png"></image>
+  </view>
+  <view class='view_base' bindtap='foreverorder'>
+    <image style='width:40rpx;height:40rpx;' src="/image/permanent_order.png"></image>
+    <text class='text_base'>永久订单</text>
+    <image style='width:40rpx;height:40rpx;position:absolute;right:0;' src="/image/right_arrow.png"></image>
+  </view>
+  <view class='view_base' bindtap='logisticsInformation'>
+    <image style='width:40rpx;height:40rpx;' src="/image/logistics.png"></image>
+    <text class='text_base'>物流信息</text>
+    <image style='width:40rpx;height:40rpx;position:absolute;right:0;' src="/image/right_arrow.png"></image>
+  </view>
+  <view class='view_base' bindtap='periodSetting'>
+    <image style='width:40rpx;height:40rpx;' src="/image/menstrual_setting.png"></image>
+    <text class='text_base'>经期设置</text>
+    <image style='width:40rpx;height:40rpx;position:absolute;right:0;' src="/image/right_arrow.png"></image>
+  </view>
+  <view class='view_base' bindtap='periodrecord'>
+    <image style='width:40rpx;height:40rpx;' src="/image/menstrual_records.png"></image>
+    <text class='text_base'>经期记录</text>
+    <image style='width:40rpx;height:40rpx;position:absolute;right:0;' src="/image/right_arrow.png"></image>
+  </view>
+  <view class='view_base' bindtap='receivingAddress'>
+    <image style='width:40rpx;height:40rpx;' src="/image/address.png"></image>
+    <text class='text_base'>收货地址</text>
+    <image style='width:40rpx;height:40rpx;position:absolute;right:0;' src="/image/right_arrow.png"></image>
+  </view>
+  <view class='view_base' bindtap='customerService'>
+    <image style='width:40rpx;height:40rpx;' src="/image/customer_service.png"></image>
+    <text class='text_base'>客服</text>
+    <image style='width:40rpx;height:40rpx;position:absolute;right:0;' src="/image/right_arrow.png"></image>
+  </view>
+</view>

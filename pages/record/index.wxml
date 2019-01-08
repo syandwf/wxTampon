@@ -1,0 +1,25 @@
+<!--pages/record/index.wxml-->
+  <calendar calendar-style="calendar" year="{{year}}" month="{{month}}" header-style="header" board-style="board" show-more-days="{{false}}" days-color="{{days_style}}" weeks-type="cn" cell-size="35" bindprevMonth="prev" bindnextMonth="next" binddateChange="dateChange" binddayClick="dayClick" />
+  <view class='cal_bottom'>
+    <view class="base_bot"><view class='bot_img1'></view><text class='bot_text1'>月经期</text></view>
+    <view class="base_bot"><view class='bot_img2'></view><text class='bot_text2'>预测期</text></view>
+    <view class="base_bot"><view class='bot_img3'></view><text class='bot_text3'>今日</text></view>
+  </view>
+  <view wx:if="{{isShow}}">
+    <view class='view_base'>
+      <image style='width:50rpx;height:50rpx;' src="/image/water.png"></image>
+      <text class='text_base'>大姨妈来咯</text>
+      <switch color='#fc5871' style='position:absolute;right:10px;top:10px;' bindchange="switch1Change"/>
+    </view>
+    <view class='view_base'>
+      <image style='width:60rpx;height:60rpx;' src="/image/pregnant.png"></image>
+      <text class='text_base'>怀孕了</text>
+      <switch color='#fc5871' style='position:absolute;right:10px;top:10px;' bindchange="switch2Change"/>
+    </view>
+  </view>
+  <block wx:else>
+    <view class='view_backUp'>
+      <button class='back_today' bindtap='backToday'>回到今天</button>
+    </view>
+  </block>
+  
